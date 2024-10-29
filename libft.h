@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:21:14 by mdakni            #+#    #+#             */
-/*   Updated: 2024/10/26 02:06:43 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:21:55 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,13 @@ int		ft_tolower(int c);
 void	*calloc(size_t count, size_t size);
 char	**ft_split(char const *s, char c);
 int		ft_toupper(int c);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+			size_t dstsize);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src,
+			size_t dstsize);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

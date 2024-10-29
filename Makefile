@@ -6,7 +6,7 @@
 #    By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/25 15:02:03 by mdakni            #+#    #+#              #
-#    Updated: 2024/10/26 02:09:41 by mdakni           ###   ########.fr        #
+#    Updated: 2024/10/29 19:22:08 by mdakni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,13 @@ ft_isprint.c\
 ft_bzero.c\
 ft_toupper.c\
 ft_tolower.c\
-ft_split.c
+ft_split.c\
+ft_memcpy.c\
+ft_memmove.c\
+ft_strlcpy.c\
+ft_strlcat.c\
+ft_memchr.c\
+ft_memcmp.c
 
 NAME = libft.a
 CC = cc -Wall -Wextra -Werror
@@ -45,6 +51,9 @@ all:$(NAME)
 $(NAME):$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+%.o:%.c
+	$(CC) -c $< -o $@
+	
 clean:
 	rm -f $(OBJS)
 
@@ -53,6 +62,7 @@ fclean:clean
 	
 re:fclean $(NAME)
 
+.PHONY: all clean fclean re
 
 	
 	
