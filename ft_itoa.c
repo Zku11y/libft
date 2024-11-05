@@ -6,13 +6,13 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:34:35 by mdakni            #+#    #+#             */
-/*   Updated: 2024/10/29 14:24:09 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/04 18:50:41 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*int_min_handler(void)
+static char	*int_min_handler(void)
 {
 	int		i;
 	char	*ptr;
@@ -31,7 +31,7 @@ char	*int_min_handler(void)
 	return (ptr);
 }
 
-int	size_of_int(int n)
+static int	size_of_int(int n)
 {
 	int	size;
 
@@ -49,7 +49,7 @@ int	size_of_int(int n)
 	return (size);
 }
 
-char	*converter(int n, char *ptr, int i)
+static char	*converter(int n, char *ptr, int i)
 {
 	int	sign;
 
@@ -59,8 +59,9 @@ char	*converter(int n, char *ptr, int i)
 		n = -n;
 		sign = -1;
 	}
-	while (i-- > 0)
+	while (i > 0)
 	{
+		i--;
 		if (sign == -1 && i == 0)
 		{
 			ptr[i] = '-';
@@ -87,4 +88,9 @@ char	*ft_itoa(int n)
 		return (NULL);
 	ptr[i] = '\0';
 	return (converter(n, ptr, i));
+}
+
+int main()
+{
+	printf("%s\n", ft_itoa(-4532246));
 }

@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 04:46:40 by mdakni            #+#    #+#             */
-/*   Updated: 2024/11/05 10:05:19 by mdakni           ###   ########.fr       */
+/*   Created: 2024/10/31 17:29:47 by mdakni            #+#    #+#             */
+/*   Updated: 2024/11/04 21:28:37 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t				i;
-	unsigned char		*destination;
-	const unsigned char	*source;
-
-	if (!dst && !src)
-		return (NULL);
-	i = 0;
-	destination = (unsigned char *)dst;
-	source = (const unsigned char *)src;
-	while (i < n)
-	{
-		destination[i] = source[i];
-		i++;
-	}
-	return (dst);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
