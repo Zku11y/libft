@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 23:24:12 by mdakni            #+#    #+#             */
-/*   Updated: 2024/11/05 11:24:14 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/05 20:52:54 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int			i;
 	const char	*ptr;
 
 	ptr = NULL;

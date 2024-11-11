@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:53:45 by mdakni            #+#    #+#             */
-/*   Updated: 2024/11/04 21:29:14 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/05 22:12:51 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
 }
-
-/* 	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n)
-	{
-		*ptr++ = '\0';
-		n--;
-	} */

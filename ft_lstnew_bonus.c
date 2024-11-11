@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:15:35 by mdakni            #+#    #+#             */
-/*   Updated: 2024/11/01 00:32:27 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/05 20:55:27 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ t_list	*ft_lstnew(void *content)
 	ptr = malloc(sizeof(t_list));
 	if (ptr == NULL)
 		return (NULL);
-	if (content == NULL)
-		ptr->content = NULL;
-	ptr->content = (char *)content;
+	ptr->content = content;
 	ptr->next = NULL;
 	return (ptr);
 }

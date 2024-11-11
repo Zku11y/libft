@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:45:54 by mdakni            #+#    #+#             */
-/*   Updated: 2024/11/04 21:27:20 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/07 16:05:24 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	start = ft_start(s1, set);
-	len = ft_size(s1, set, start);
 	if (ft_strlen(s1) == start)
 		return (ft_strdup(""));
+	len = ft_size(s1, set, start);
 	return (ft_substr(s1, start, len));
 }

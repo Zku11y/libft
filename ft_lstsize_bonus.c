@@ -6,7 +6,7 @@
 /*   By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:47:57 by mdakni            #+#    #+#             */
-/*   Updated: 2024/10/31 23:48:20 by mdakni           ###   ########.fr       */
+/*   Updated: 2024/11/05 19:20:45 by mdakni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_lstsize(t_list *lst)
 {
 	size_t	i;
 
-	if (!lst)
-		return (0);
 	i = 0;
 	while (lst)
 	{

@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mdakni <mdakni@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/25 15:02:03 by mdakni            #+#    #+#              #
-#    Updated: 2024/11/05 10:07:24 by mdakni           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS = ft_memset.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c\
 ft_substr.c ft_strjoin.c ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c\
 ft_strlen.c ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_striteri.c\
@@ -31,24 +19,22 @@ BOBJS = $(BSRCS:.c=.o)
 
 all:$(NAME)
 
-
-
 $(NAME):$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(BOBJS)
 	ar rcs $(NAME) $(BOBJS)
-#handle bonus relinking!!!!!
+
 %.o: %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BOBJS)
 
-fclean:clean
+fclean: clean
 	rm -f $(NAME)
 
-re:fclean $(NAME)
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re bonus
 
